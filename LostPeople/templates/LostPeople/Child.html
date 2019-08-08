@@ -1,0 +1,36 @@
+{% extends '../templates/LostPeople/baseLost3.html' %}
+
+{% block con %}
+    <div class="service">
+   <h1>Chil<span>dren</span></h1>
+
+    <div class="row">
+
+    {% for temp in child %}
+         {% if temp.Accept %}
+         <div class="wow bounceInDown serv1 col-lg-4 col-md-4">
+              <a href="{% url 'LostPeople:detail' id=temp.id %}"> <img class="img" src="{{ temp.Img.url }}" /></a><br>
+            <p class="info"><b> Missed Name : </b>{{ temp.name }}<br>
+            <b>Name Reletive/Founder :</b>{{ temp.Name_Founder }}<br>
+            <b>Date :</b> {{ temp.date }}<br>
+              <b>Age :</b>  {{ temp.age }}<br>
+            </p>
+             <br>
+            <button onclick="alertFunctionread()"><a href="{% url 'LostPeople:detail' id=temp.id %}"> Read more </a></button>
+             {% if user.is_staff %}
+            <button onclick="alertFunctiondelete()"><a href="{% url 'LostPeople:deleteData' id4=temp.id %}"> Delete </a></button>
+             {% endif %}
+          </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
+    <script>
+function alertFunctionread() {
+ alert("more details for missed.");
+}
+function alertFunctiondelete() {
+ alert("child is deleted.");
+}
+</script>
+{% endblock %}

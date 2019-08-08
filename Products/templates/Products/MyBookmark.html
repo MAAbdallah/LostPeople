@@ -1,0 +1,24 @@
+{% extends '../templates/LostPeople/baseLost3.html' %}
+
+{% block con %}
+    <!--------------------------------- start Of bookmark !----------------------------------------------------->
+<div class="service">
+   <h1>MY<span>Bookmark</span></h1>
+    <div class="row">
+        {% for temp in Products %}
+             <div class="serv1 col-lg-4 col-md-4">
+                 <a href="{% url 'Products:detailP' id=temp.id %}"> <img class="img" src="{{ temp.Img.url }}" /></a>
+                <p class="info"><b>Name of Product : </b>{{ temp.nameP }}<br>
+                <b>Store Locatione : </b>{{ temp.Store_location }}<br>
+
+               <b>Store Name : </b> {{ temp.Store_Name }}<br>
+                  <b>Price : </b>   {{ temp.price }}<br></p>
+                 <br>
+                <button><a href="{% url 'Products:detailP' id=temp.id %}"> Read more </a></button>
+              </div>
+        {% endfor %}
+    </div>
+
+</div>
+<!--------------------------------- End Of bookmark !----------------------------------------------------->
+{% endblock %}

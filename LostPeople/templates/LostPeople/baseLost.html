@@ -1,0 +1,204 @@
+{% load bootstrap4 %}
+{% load staticfiles %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"  href="../../../static/css/home.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../../../static/js/custom.js"></script>
+    <link rel="stylesheet" href="../../../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../static/css/bootstrap.css">
+    <script src="../../../static/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+     <link rel="stylesheet" href="../../../static/animate.css-master/animate.min.css">
+    <link rel="stylesheet" href="../../../static/animate.css-master/animate.css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Slabo+27px&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg ">
+    <h1><a class="ankor" href="{% url 'home' %}" ><i class="fas fa-child"></i>REA<span>YAA</span></a></h1>
+  <button class="wow bounceInDown navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="wow bounceInDown navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="wow bounceInDown navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'LostPeople:child' %}">children</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'LostPeople:adult' %}">Adults</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'Products:listP' %}">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'LostPeople:create' %}">Add Missed</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'Products:listC' %}">Charities</a>
+      </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'Products:Myfav' %}">My Favourites </a>
+    </li>
+
+     <li class="nav-item">
+        <a class="nav-link" href="#">Help</a>
+      </li>
+        {% if user.is_authenticated %}
+                {% if user.is_staff %}
+                     <li class="nav-item"><a class="nav-link" href="{% url 'LostPeople:wait' %}">Wating Missed</a></li>
+                     <li class="nav-item"><a class="nav-link" href="{% url 'Products:createP' %}">Add Product</a></li>
+                     <li class="nav-item"><a class="nav-link" href="{% url 'Products:createC' %}">Add Chrity</a></li>
+                {% endif %}
+        {% endif %}
+    </ul>
+      {% if user.is_authenticated %}
+        <form class="logout-link" action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button class="wow bounceInDown btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+        </form>
+      {% else %}
+          <button class="wow bounceInDown btn btn-outline-success my-2 mx-3 my-sm-0" type="submit" ><a href="{% url 'login' %}"> Sign In</a></button>
+          <button class="wow bounceInDown btn btn-outline-success my-2 my-sm-0" type="submit"><a href="{% url 'signup' %}">Sign Up</a></button>
+      {% endif %}
+  </div>
+
+</nav>
+
+
+     <!--------------------------------- End Of nav bar !----------------------------------------------------->
+                {% include '../templates/LostPeople/Comments.html' %}
+
+
+  <!--------------------------------- start Of search div !----------------------------------------------------->
+  <div class="back">
+     <div class="buttons">
+         <div class="container">
+          <button id="SearchID1" class="wow bounceInUp btn col-lg-3 col-md-5 col-sm-5 btn-outline-success">Search By Name</button>
+      <button id="SearchID" class="wow bounceInUp btn col-lg-3 col-md-5 col-sm-5 btn-outline-success ">Search By Image</button>
+      </div>
+     </div>
+  </div>
+  <div class="Search1">
+      <div class="row">
+          <div class="filter col-lg-12 col-d-10 col-sm-12">
+               <h1>Search..Filter</h1>
+                <form name="myform" method="GET"  action="{% url 'LostPeople:search' %}">
+                                            {% csrf_token %}
+                    <input class="form-control" type="search" placeholder="Enter Missed Name" aria-label="Search" name="SearchedName" value="{{ request.GET.SearchedName }}">
+                          <br>
+                           <p>Date Of Lost </p>
+                            <input class="form-control" type="date" name="bday" ><br>
+                            <ul class="col-lg-2 options">
+                             <p>Age</p>
+                             <li><input type="radio" id="all-Ages" name="age" value="all">All</li>
+                             <li><input type="radio" id="1-10" name="age" value="ten">1:10</li>
+                             <li><input type="radio" id="11-20" name="age" value="twin">11:20</li>
+                             <li><input type="radio" id="UP-20" name="age" value="Up20">UpTO20</li>
+                            </ul>
+                           <button id="SearchID"  class="btn btn-outline-success my-2 my-sm-0">Search</button>
+                  </form>
+          </div>
+      </div>
+  </div>
+    <div class="search2">
+        <div class="row">
+             <div class="seaimg col-lg-12 col-d-10 col-sm-12">
+                           <h1>Search By Image </h1>
+                           <form action="{% url 'LostPeople:API' %}" method="post" enctype="multipart/form-data"><br>
+                                                  {% csrf_token %}
+                            <p>Select image to upload#</p>
+                            <input type="file" name="IMG" id="IMG" ><br>
+                            <br>
+                            <br>
+                            <br>
+                            <input class="btn btn-outline-success my-2 my-sm-0 " type="submit" value="Upload Image" name="submit">
+                       </form>
+
+        </div>
+            </div>
+        </div>
+
+   <!--------------------------------- End  Of search div !----------------------------------------------------->
+
+
+
+
+<!-- hitwebcounter Code START -->
+<!--<a href="http://www.hitwebcounter.com" target="_blank">
+<img src="http://hitwebcounter.com/counter/counter.php?page=7108237&style=0010&nbdigits=5&type=page&initCount=0" title="webs counters" Alt="webs counters"   border="0" >
+</a><br/>
+    -- hitwebcounter.com -
+        <a href="http://www.hitwebcounter.com" title="" target="_blank" style=" font-family:Arial ;  font-size: px; color:#0b2e13; text-decoration:none  ;">
+    </a>!-->
+
+
+<div class="wrapper">
+
+            {% block con %}
+
+            {% endblock %}
+</div>
+
+<!-- Footer !-->
+
+    <div  id="footer"class="footer">
+        <div class="container">
+            <div class="row">
+               <div class="wow bounceInLeft col-lg-4 col-md-4">
+               <h2>Contact Us</h2>
+               <p><i class="fas fa-home"></i> 111 Main Street,Washington DC,222</p>
+               <p><i class="fas fa-envelope"></i> info@media.com</p>
+               <p><i class="fas fa-phone-square"></i> +0223377469</p>
+               <p><i class="fas fa-globe-asia"></i> www.media.com</p>
+               </div>
+                <div class="wow bounceInUp col-lg-4 col-md-4">
+                <h2>ABOUT</h2>
+                <p><i class="far fa-square"></i> About Us</p>
+                <p><i class="far fa-square"></i> Privacy</p>
+                <p><i class="far fa-square"></i> TERM & Condition</p>
+                </div>
+                <div class="wow bounceInRight col-lg-4 col-md-4">
+                <h2>Stay in Touch</h2>
+                      <i class="social fab fa-facebook-f"></i>
+                      <i class="social fab fa-twitter"></i>
+                      <i class="social fab fa-linkedin-in"></i>
+                      <i class="social fab fa-youtube"></i>
+                      <i class="social fab fa-github"></i>
+                      <i class="social fas fa-at"></i><br>
+                     <input type="email" placeholder="Subscribe For Updates"><button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+
+
+      <script src="../../../static/js/WOW.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+     <script src="../static/js/home.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% extends '../templates/LostPeople/baseLost3.html' %}
+
+{% block con %}
+    <!--------------------------------- start Of product !----------------------------------------------------->
+<div class="service">
+   <h1>Prod<span>ucts</span></h1>
+    <div class="row">
+        {% for temp in products %}
+             <div class="wow bounceInDown serv1 col-lg-4 col-md-4">
+                 <a href="{% url 'Products:detailP' id=temp.id %}"> <img class="img" src="{{ temp.Img.url }}" /></a><br>
+                <p class="info"><b>Name of Product : </b>{{ temp.nameP }}<br>
+                <b>Store Location : </b>{{ temp.Store_location }}<br>
+                <b>Store Name : </b>{{ temp.Store_Name }}<br>
+                <b>Product Price : </b>{{ temp.price }}<br></p>
+                 <br>
+                 <form name="fav" action="{% url 'Products:fav' id2=temp.id %}" method="get">
+                     <button type="submit" name="Submit" value="Submit" ><i class="far fa-star" ></i></button>
+                 </form>
+                <button><a href="{% url 'Products:detailP' id=temp.id %}"> Read more </a></button>
+             {% if user.is_staff %}
+                 <button><a href="{% url 'Products:deleteProduct' id3=temp.id %}"> Delete </a></button> <br>
+             {% endif %}
+              </div>
+        {% endfor %}
+    </div>
+
+</div>
+<!--------------------------------- End Of product !----------------------------------------------------->
+{% endblock %}

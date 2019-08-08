@@ -1,0 +1,25 @@
+{% extends '../templates/LostPeople/baseLost2.html' %}
+
+{% block con %}
+    <div class="container1">
+        <div class="login">
+            <h1>WEL<span>COME</span></h1>
+            <form action="{% url 'Products:createC' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="CharityName">Charity Name</label>
+                    <input type="text" name="CharityName" class="form-control" id="CharityName" aria-describedby="emailHelp" placeholder="Enter Charity Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Store Location </label>
+                    <input type="text" name="address" class="form-control" id="address" placeholder="Enter address " required>
+                </div>
+                <div class="form-group">
+                    <label for="Phone_nubmer">Phone nubmer</label>
+                    <input type="tel"  name="Phone_nubmer" class="form-control" id="Phone_nubmer" placeholder="Enter Phone nubmer " required>
+                </div>
+                <button type="submit" class="btn btn-outline-success">Add Charity</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

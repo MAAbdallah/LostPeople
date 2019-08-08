@@ -1,0 +1,71 @@
+{% extends '../templates/LostPeople/baseLost.html' %}
+
+{% block con %}
+
+
+<!--------------------------------- start Of Children !----------------------------------------------------->
+<div class="children">
+   <h1>Chil<span>dren</span></h1>
+    <div class="row">
+        {% for temp in child  %}
+             {% if temp.Accept %}
+             <div class="wow bounceInUp chil1 col-lg-4 col-md-4">
+                  <a href="{% url 'LostPeople:detail' id=temp.id %}"> <img class="img" src="{{ temp.Img.url }}" /></a><br>
+                 <p class="info"> <b> Missed Name : </b> {{ temp.name }}<br>
+                     <b>Name Reletive/Founder :</b> {{ temp.Name_Founder }}<br>
+                     <b>Date :</b> {{ temp.date }}<br>
+                     <b>Age : </b> {{ temp.age }}<br>
+                </p>
+                 <br>
+                <button><a href="{% url 'LostPeople:detail' id=temp.id %}"> Read more </a></button>
+              </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+</div>
+<!--------------------------------- End Of Children !----------------------------------------------------->
+
+
+    <!--------------------------------- start Of Adult !----------------------------------------------------->
+<div class="Adult">
+   <h1>Adu<span>lts</span></h1>
+    <div class="row">
+        {% for temp in Adult  %}
+             {% if temp.Accept %}
+             <div class="wow bounceInUp adu1 col-lg-4 col-md-4">
+                   <a href="{% url 'LostPeople:detail' id=temp.id %}"> <img class="img" src="{{ temp.Img.url }}" /></a><br>
+                 <p class="info"> <b> Missed Name : </b> {{ temp.name }}<br>
+                     <b>Name Reletive/Founder : </b>{{ temp.Name_Founder }}<br>
+               <b> Date :</b> {{ temp.date }}<br>
+                     <b> Age : </b> {{ temp.age }}<br></p>
+                 <br>
+                <button><a href="{% url 'LostPeople:detail' id=temp.id %}"> Read more </a></button>
+              </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+</div>
+<!--------------------------------- End Of Adult !----------------------------------------------------->
+
+
+    <!--------------------------------- start Of product !----------------------------------------------------->
+<div class="service">
+   <h1>Prod<span>ucts</span></h1>
+    <div class="row">
+        {% for temp in Products  %}
+             <div class="wow bounceInUp serv1 col-lg-4 col-md-4">
+                 <a href="{% url 'LostPeople:detail' id=temp.id %}"> <img class="img" src="{{ temp.Img.url }}" /></a><br>
+                 <p class="info"> <b>Name of Product : </b> {{ temp.nameP }}<br>
+                  <b>  Price : </b>{{ temp.price }}<br></p>
+                 <br>
+                <button><a href="{% url 'Products:detailP' id=temp.id %}"> read more </a></button>
+              </div>
+        {% endfor %}
+    </div>
+
+</div>
+<!--------------------------------- End Of product !----------------------------------------------------->
+
+{% endblock %}

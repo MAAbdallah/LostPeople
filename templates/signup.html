@@ -1,0 +1,28 @@
+{% extends '../templates/LostPeople/baseLost2.html' %}
+
+{% block con %}
+
+    <div class="container1">
+    <div class="login">
+          <h1>SIGN<span>UP</span></h1>
+         <form action="{% url 'signup' %}" method="post">
+             {% csrf_token %}
+
+          <div class="form-group">
+            <label for="id_username">User Name</label>
+            <input type="text" name="username" class="form-control" id="id_username" aria-describedby="emailHelp" placeholder="Enter username">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="id_password1">Password</label>
+            <input type="password" name="password1" class="form-control" id="id_password1" placeholder="Password">
+          </div>
+            <div class="form-group">
+            <label for="id_password2">Re-Enter Password</label>
+            <input type="password"  name="password2" class="form-control" id="id_password2" placeholder="Confirm Password">
+          </div>
+  <button type="submit" name="signup" class="btn btn-outline-success">SignUp</button>
+</form>
+    </div>
+    </div>
+{% endblock %}

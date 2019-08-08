@@ -1,0 +1,19 @@
+{% extends '../templates/LostPeople/baseLost2.html' %}
+
+{% block con %}
+<div class="service">
+ <h1>Prod<span>ucts</span></h1>
+    <div class="row">
+   <div class="wow bounceInDown serv1 col-lg-4 col-md-4">
+        <img class="img" src="{{ product.Img.url }}" /><br>
+        <p class="info"><b>Name of Product : </b>{{ product.nameP }}<br>
+        <b>Store Location : </b>{{ product.Store_location }}<br>
+        <b>Store Name : </b>{{ product.Store_Name }}<br>
+        <b>Price : </b>{{ product.price }}<br>
+    </div>
+</div>
+{% endblock %}
+
+
+
+

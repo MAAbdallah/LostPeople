@@ -1,0 +1,33 @@
+{% extends '../templates/LostPeople/baseLost2.html' %}
+
+{% block con %}
+    <div class="container1">
+        <div class="login">
+            <h1>WEL<span>COME</span></h1>
+            <form action="{% url 'Products:createP' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="ProductName">Product Name</label>
+                    <input type="text" name="ProductName" class="form-control" id="ProductName" aria-describedby="emailHelp" placeholder="Enter Product Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="IMG">Image Of Product</label>
+                    <input type="file" name="IMG" id="IMG" ><br>
+                </div>
+                <div class="form-group">
+                    <label for="NameStore">Store Name </label>
+                    <input type="text" name="NameStore" class="form-control" id="NameStore" placeholder="Enter Name of Store " required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Store Location </label>
+                    <input type="text" name="location" class="form-control" id="location" placeholder="Enter Location " required>
+                </div>
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="number"  name="price" class="form-control" id="price" placeholder="Price " required>
+                </div>
+                <button type="submit" class="btn btn-outline-success">Add Product</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

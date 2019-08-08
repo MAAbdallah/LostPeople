@@ -1,0 +1,23 @@
+{% extends '../templates/LostPeople/baseLost3.html' %}
+
+{% block con %}
+    <!--------------------------------- start Of Charity !----------------------------------------------------->
+<div class="charity">
+   <h1>Char<span>ities</span></h1>
+    <div class="row">
+        {% for temp in charities %}
+             <div class="char col-lg-4 col-md-4">
+                <p class="info"> <b>Charity Name : </b>{{ temp.name }}<br>
+                <b>Charity Adress :  </b>{{ temp.address }}<br>
+                  <b>Phone No. : </b>  {{ temp.Phone_nubmer }}<br></p>
+                 <br>
+             {% if user.is_staff %}
+                 <button><a href="{% url 'Products:deleteCharity' id4=temp.id %}"> Delete </a></button> <br>
+             {% endif %}
+              </div>
+        {% endfor %}
+    </div>
+
+</div>
+<!--------------------------------- End Of product !----------------------------------------------------->
+{% endblock %}

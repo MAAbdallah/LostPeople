@@ -1,0 +1,30 @@
+{% extends '../templates/LostPeople/baseLost3.html' %}
+
+{% block con %}
+
+    <div class="service">
+   <h1>Wait<span>ing</span></h1>
+    <div class="row">
+    {% for wating in watings %}
+        {% if not  wating.Accept %}
+         <div class="wow bounceInDown serv1 col-lg-4 col-md-4">
+            <a href="{% url 'LostPeople:detail' id=wating.id %}"> <img class="img" src="{{ wating.Img.url }}" /></a> <br>
+            <p>{{ wating.name }}<br>
+            {{ wating.Name_Founder }}<br>
+            {{ wating.date }}<br>
+            </p>
+         <br>
+             <button><a href="{% url 'LostPeople:detail' id=wating.id %}"> Read more </a></button> <br>
+            {% if user.is_staff and not missed.Accept %}
+                <button> <a href="{% url 'LostPeople:accept' id2=wating.id %}">Accept</a> <br></button> <br>
+            {% endif %}
+             {% if user.is_staff %}
+            <button><a href="{% url 'LostPeople:deleteWating' id4=wating.id %}"> Delete </a></button> <br>
+             {% endif %}
+          </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

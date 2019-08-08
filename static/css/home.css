@@ -1,0 +1,1095 @@
+*
+{
+    font-family: 'Slabo 27px', serif;
+font-family: 'Playfair Display', serif;
+}
+body
+{
+    overflow-x: hidden;
+}
+.navbar{
+    background-color: #563d7c;
+    color: #cbbde2;
+}
+.navbar .nav-item{
+    height: 100%;
+     color: #cbbde2;
+      transition: 0.5s;
+}
+.navbar a{
+    color:#cbbde2;
+    transition: 0.5s;
+}
+.navbar h1 .ankor{
+    color:#ff751a;
+    transition: 0.5;
+    text-decoration: none;
+}
+.navbar h1 .ankor:hover{
+    color:#ff751a;
+    transition: 0.5s;
+    text-decoration: none;
+}
+.navbar .ankor span{
+    color: white;
+}
+.navbar a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar button{
+
+    border-color: #ff751a;
+    color: white;
+    transition: 1s;
+}
+.navbar #btn1{
+margin-left: 300px;
+}
+.navbar span .navbar-toggler-icon{
+    color: white;
+}
+.navbar button:hover{
+    background-color: #ff751a;
+    border-color: #ff751a;
+    color: white;
+}
+
+.form-inline{
+    width:1500px;
+    margin-left: 500px;
+}
+
+
+/* ---------------------Start of search div -----------------*/
+.search .form-control , .search .btn{
+    border:2px solid;
+    border-color: #563d7c
+}
+
+.search .btn{
+    background-color: #563d7c;
+    border: 2px solid #ff751a;
+    border-radius: 10%;
+    color: #fff;
+}
+.search .dropdown-item{
+    color: #563d7c;
+
+}
+
+.search .btn:hover {
+    background-color: #ff751a;
+
+    
+}
+
+
+.search .dropdown-item:hover{
+    color: #ff751a;
+
+}
+
+/* ---------------------end of search div -----------------*/
+
+/* ---------------------Start of carousal -----------------*/
+.carousel{
+    height: 500px;
+}
+.carousel .carousel-inner{
+    height: 100%;
+    background-size: contain;
+}
+.carousel .carousel-inner img{
+    height: 650px;
+}
+
+/* ---------------------end of carousal ------------------*/
+
+
+
+/* ---------------------start Of popup login ------------------*/
+
+
+/*{box-sizing: border-box;}*/
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+
+
+/*The popup form - hidden by default*/
+/*.form-popup {
+  display: none;
+  position: absolute;
+  right: 500px;
+  border: 3px solid #f1f1f1;
+  top:150px;
+  z-index: 9;
+  color: #563d7c;
+
+}
+.form-popup h3 {
+text-align: center;
+}*/
+
+/* Add styles to the form container*/
+/*.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}*/
+
+/* Full-width input fields */
+/*.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  height: 40px;
+}*/
+
+/* When the inputs get focus, do something */
+/*.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}*/
+
+/* Set a style for the submit/login button */
+/*.form-container .btn {
+  background-color: #563d7c;
+  color: white;
+  padding: 16px 20px;
+  border:1px solid #ff751a; 
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+  padding-top: 10px;
+  margin-bottom:10px;
+  opacity: 1;
+}*/
+
+/* Add some hover effects to buttons */
+/*.form-container .btn:hover{
+  background-color: #ff751a;
+    border-color: #ff751a;
+    color: white;
+}
+
+
+
+
+
+
+{box-sizing: border-box;}*/
+
+
+
+/* The popup form - hidden by default */
+/*#childInfo {
+  display: none;
+  position: absolute;
+  right: 500px;
+  border: 3px solid #f1f1f1;
+  top:150px;
+  z-index: 9;
+
+}*/
+
+/* Add styles to the form container*/
+/*#childInfo {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+*/
+
+/*#childInfo .cancelChild {
+    cursor: pointer;
+    width: 100%;
+    background-color:#563d7c; 
+    border:2px solid #ff751a; 
+    color: white;
+    transition: 1s;
+    opacity: 1;
+}*/
+
+/* Add a red background color to the cancel button */
+
+
+/*#childInfo .cancelChild:hover{
+    background-color: #ff751a;
+    border-color: #ff751a;
+    color: white;
+}*/
+
+
+/* ---------------------Enf Of popup childInfo ------------------*/
+
+
+/* ---------------------Start of children -----------------*/
+
+
+
+.children{
+    width:100%;
+    height: auto;
+    padding: 40px 0 80px;
+    text-align: center;
+    background-color: white;
+    display: inline-block;
+    overflow: hidden;
+    border-bottom: 4px solid gray;
+    
+}
+.children .info{
+    text-align: left;
+}
+
+.children h1{
+    display: inline-block;
+    font-weight: 1000;
+    color: #ff751a;
+}
+.children b{
+    color: #563d7c;
+    font-weight: 800;
+}
+.children p{
+    font-weight: 700;
+}
+.children .row .chil1{
+    height: 500px;
+    background-color: lightgray;
+    display: inline-block;
+    border: 20px solid white ;
+    border-radius: 10px;
+    
+}
+.children .row .chil1 .img{
+       
+        margin-top: 20px;
+        width: 80%;
+        height: 200px;
+        display: inline-block;
+        transition: 0.5s;
+}
+.children .row .chil1 .img:hover{
+       
+        width: 83%;
+        height: 220px;
+        display: inline-block;
+}
+.children .row .chil1 p{
+    display: inline-block;
+}
+.children span{
+    margin-top: 30px;
+    display: inline-block;
+    color: darkgrey;
+}
+.children .row .chil1 a{
+    text-decoration: none;
+    color: #563d7c;
+}
+.children .row .chil1 a:hover{
+    text-decoration: none;
+    color: white;
+}
+.children .row .chil1 button{
+    width: 30%;
+    border: 2px solid #563d7c;
+    border-radius: 5px;
+    color: #563d7c;
+    transition: 1s;
+    text-align: center;
+    margin-top: 10px;
+    
+}
+
+.children .row .chil1 button:hover{
+    background-color: #563d7c;
+    border-color: #563d7c;
+    color: white;
+}
+.service .comm{
+    width: 90%;
+    height: 460px;
+    overflow-y: scroll;
+    margin-top: 22px;
+    text-align: left;
+    border-radius: 10px;
+
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:gray;
+  border-radius: 10px;
+}
+.service .comments{
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #563d7c;
+    color: white;
+    border-bottom: 1px solid gray;
+    padding-left: 20px;
+}
+.service .btn-outline-success{
+    background-color:#563d7c ;
+    border-color: #563d7c;
+     width: 150px;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+.service form input{
+    width: 30%;
+    margin-left: 10%;
+}
+.service .btn-outline-success:hover{
+    background-color:#ff751a ;
+    border-color: #ff751a;
+    color: white;
+}
+/* ---------------------end of children ------------------*/
+
+
+
+
+/* ---------------------Start of Adults -----------------*/
+
+
+
+.Adult{
+    width:100%;
+    height: auto;
+    padding: 40px 0 80px;
+    text-align: center;
+    background-color: white;
+    display: inline-block;
+    overflow: hidden;
+    border-bottom: 4px solid gray;
+    
+}
+.Adult .info{
+    text-align: left;
+}
+.Adult b{
+    color: #563d7c;
+    font-weight: 800;
+}
+.Adult p{
+    font-weight: 700;
+}
+.Adult h1{
+    display: inline-block;
+    font-weight: 1000;
+    color: #ff751a;
+}
+.Adult .row .adu1{
+    height: 500px;
+    background-color: lightgray;
+    display: inline-block;
+    color:black;
+    border: 20px solid white ;
+    border-radius: 10px;
+    
+}
+.Adult .row .adu1 img{
+       
+        margin-top: 20px;
+        width: 80%;
+        height: 200px;
+        display: inline-block;
+    transition: 0.5s;
+}
+.Adult .row .adu1 img:hover{
+       
+        width: 83%;
+        height: 220px;
+        display: inline-block;
+}
+.Adult .row .adu1 p{
+    margin-top: 30px;
+    display: inline-block;
+}
+.Adult .row .adu1 a{
+    text-decoration: none;
+    color: #563d7c;
+}
+.Adult .row .adu1 a:hover{
+    text-decoration: none;
+    color: white;
+}
+.Adult span{
+    margin-top: 30px;
+    display: inline-block;
+    color: darkgrey;
+}
+.Adult .row .adu1 button{
+    width: 30%;
+    border: 2px solid #563d7c;
+     border-radius: 5px;
+    color: #563d7c;
+    transition: 1s;
+    text-align: center;
+    
+}
+
+.Adult .row .adu1 button:hover{
+    background-color: #563d7c;
+    border-color: #563d7c;
+    color: white;
+}
+/* ---------------------end of Adults ------------------*/
+
+
+
+
+/* ---------------------Start of services -----------------*/
+
+
+
+.service{
+    width:100%;
+    height: auto;
+    padding: 40px 0 80px;
+    text-align: center;
+    background-color: white;
+    display: inline-block;
+    overflow: hidden;
+    
+}
+.service .info{
+    text-align: left;
+}
+.service b{
+    color: #563d7c;
+    font-weight: 800;
+}
+.service p{
+    font-weight: 700;
+}
+.service h1{
+    display: inline-block;
+    font-weight: 1000;
+    color: #ff751a;
+}
+.service .row .serv1{
+    height: 500px;
+    background-color: lightgray;
+    display: inline-block;
+    color:black;
+    border: 20px solid white ;
+    
+}
+.service .row .serv1 img{
+       
+        margin-top: 20px;
+        width: 80%;
+        height: 200px;
+        display: inline-block;
+    transition: 0.5s;
+}
+.service .row .serv1 img:hover{
+       
+        width: 83%;
+        height: 220px;
+        display: inline-block;
+}
+.service .row .serv1 p{
+    margin-top: 30px;
+    display: inline-block;
+}
+.service .row .serv1 a{
+    text-decoration: none;
+    color: #563d7c;
+}
+.service .row .serv1 a:hover{
+    text-decoration: none;
+    color: white;
+}
+.service span{
+    margin-top: 30px;
+    display: inline-block;
+    color: darkgrey;
+}
+.service .row .serv1 button{
+    width: 30%;
+    border: 2px solid #563d7c;
+     border-radius: 5px;
+    color: white;
+    transition: 1s;
+    text-align: center;
+    margin-top: 10px;
+    
+}
+
+.service .row .serv1 button:hover{
+    background-color: #ff751a;
+    border-color: #ff751a;
+    color: white;
+}
+/* ---------------------end of services ------------------*/
+/* ---------------------Start of charity -----------------*/
+
+
+
+.charity{
+    width:100%;
+    height: auto;
+    padding: 40px 0 80px;
+    text-align: center;
+    background-color: white;
+    display: inline-block;
+    overflow: hidden;
+
+}
+.charity .info{
+    text-align: left;
+}
+.charity b{
+    color: #563d7c;
+    font-weight: 800;
+}
+.charity p{
+    font-weight: 700;
+}
+.charity h1{
+    display: inline-block;
+    font-weight: 1000;
+    color: #ff751a;
+}
+.charity .row .char{
+    height: 250px;
+    background-color: lightgray;
+    display: inline-block;
+    color:black;
+    border: 20px solid white ;
+
+}
+.charity .row .char img{
+
+        margin-top: 20px;
+        width: 80%;
+        height: 200px;
+        display: inline-block;
+    transition: 0.5s;
+}
+.charity .row .char img:hover{
+
+        width: 83%;
+        height: 220px;
+        display: inline-block;
+}
+.charity .row .char p{
+    margin-top: 30px;
+    display: inline-block;
+}
+.charity .row .char a{
+    text-decoration: none;
+    color: #563d7c;
+}
+.charity .row .char a:hover{
+    text-decoration: none;
+    color: white;
+}
+.charity span{
+    margin-top: 30px;
+    display: inline-block;
+    color: darkgrey;
+}
+.charity .row .char button{
+    width: 30%;
+    border: 2px solid #563d7c;
+     border-radius: 5px;
+    color: #563d7c;
+    transition: 1s;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.charity .row .char button:hover{
+    background-color: #563d7c;
+    border-color: #563d7c;
+    color: white;
+}
+/* ---------------------end of services ------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------- Login Form---------------------------*/
+.container1{
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+    background-color: white;
+    
+}
+.container1 h1{
+    color: white;
+    text-align: center;
+}
+.container1 span{
+    color: #ff751a;
+}
+.login{
+    width: 450px;
+    height: auto;
+    background-color:lightgray;
+    padding: 30px;
+    margin-left: 35%;
+    margin-top: 20px;
+    
+}
+.login input,
+label {
+   border-color: #563d7c;
+    color:#563d7c;
+}
+
+
+.container1 button{
+    width: 200px;
+   border-color: #563d7c;
+    margin-left: 90px;
+    color: #563d7c;
+    transition: 1s;
+}
+.container1 button:hover{
+    width: 200px;
+    background-color: #563d7c;
+    border-color: #ff751a;
+    color: white;
+    transition: 1s;
+}
+@media(max-width:760px){
+    .container1 .login{
+        width: 90%;
+        margin-left: 20px;;
+    }
+    .container1 button{
+    width: 80%;
+    border-color: #563d7c;
+    margin-left: 40px;
+    color: white;
+    transition: 1s;
+}
+    .container1 button:hover{
+   width: 80%;
+    border-color: #563d7c;
+    margin-left: 40px;
+    color: white;
+    transition: 1s;
+}
+}
+
+
+/*------------------------------- End Login Form---------------------------*/
+
+
+
+
+
+#contact{
+    padding: 50px 0 80px;
+    text-align: center;
+    color: #4c4c4c;
+}
+#contact h1{
+    font-weight: 1000;
+    color: #ff751a;
+}
+#contact .us{
+color: darkgrey;
+}
+#contact p{
+    padding-bottom: 80px;
+}
+
+#contact .input-group{
+    margin-bottom: 25px;
+}
+
+#contact .btn{
+    width: 100%;
+    background-color: #ff751a;
+    font-size: 15px;
+    color: #fff;
+    transition: 0.8s;
+}
+#contact .btn:hover{
+    background-color: #a85959;
+    
+}
+#contact .input-group-addon:hover{
+    background-color:#ff751a;
+    transition: 0.7s;
+    cursor: pointer;
+}
+#contact .input-group-addon{
+   width: 38px;
+    height: 38px;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+#contact span i{
+    margin-top: 10px;
+}
+
+
+
+
+
+#footer{
+    background-color: #563d7c;
+    padding: 50px; 0 80px;
+    color: #cccccc;
+}
+#footer .social{
+    width: 30px;
+    height: 30px;
+    background-color:#222222;
+    color: #cccccc;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    cursor: pointer;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+
+#footer input{
+    height: 40px;
+    width: 160px;
+    padding: 5px;
+    background-color: #cccccc;
+    border: none;
+}
+#footer button{
+    height: 40px;
+    width: 100px;
+    border: 1px solid #ff751a;
+    background-color: #563d7c;
+    color: white;
+    margin-left: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    
+}
+#footer button:hover{
+    background-color: #ff751a;
+}
+
+@media(max-width:760px){
+    #footer .btn{
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+}
+
+/* ---------------------Start of search2 div -----------------*/
+
+.back1{
+    width: 100%;
+    height: 500px;
+    background-image: url(../images/pic2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.back1 .buttons{
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,0.8);
+}
+.back1 .buttons .container{
+    margin-left: 30%;
+    margin-top: 400px;
+    float: left;
+}
+.back1 .buttons .container #SearchID{
+    margin-left: 20px;
+    border-color:#ff751a;
+    color: #ff751a;
+    font-size: 20px;
+    transition: 1s;
+}
+.back1 .buttons #SearchID1{
+
+    border-color:#ff751a;
+    color: #ff751a;
+    font-size: 20px;
+    transition: 1s;
+}
+.back1 .buttons .container #SearchID1:hover{
+    background-color:#ff751a;
+    color: white;
+}
+.back1 .buttons .container #SearchID:hover{
+
+    background-color:#ff751a;
+    color: white;
+}
+
+.Search1{
+    width: 100%;
+    height: auto;
+    display: none;
+}
+.Search1 .filter{
+    background-color:white;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+.Search1 .filter h1{
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color:#563d7c ;
+;
+
+}
+.Search1 .filter ul{
+    list-style-type: none;
+
+}
+.Search1 .filter .form-control{
+    width: 40%;
+    border-color: #ff751a;
+
+
+}
+.Search1 .filter .date{
+    width: 20%;
+    border-color: #ff751a;
+    border-radius: 5px;
+
+}
+.Search1 .filter #SearchID{
+    width: 200px;
+    margin-left: 200px;
+    border-color: #563d7c;
+    background-color: #563d7c;
+    color:  white;
+    transition: 0.5s;
+}
+.Search1 .filter #SearchID:hover{
+    background-color: #ff751a;
+    color:  white;
+}
+@media(max-width:900px){
+   .Search1 .filter #SearchID{
+    width: 200px;
+    margin-left: 0px;
+
+}
+    .Search1 .filter{
+     width: 100%;
+}
+
+.buttons{
+    width: 100%;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.back .buttons .container {
+    margin-left: 20px;
+}
+    .back .buttons .container #SearchID,#SearchID1{
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 10px;
+    border-color:#ff751a;
+    color: #ff751a;
+    font-size: 20px;
+}
+}
+.search2{
+    width: 100%;
+    height: auto;
+    display: none;
+    padding-left: 30px;
+}
+.search2 .seaimg {
+
+     background-color:white;
+    padding-bottom: 30px;
+}
+.search2 .seaimg h1{
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: #563d7c;
+}
+.search2 .seaimg .btn{
+    width: 200px;
+    margin-left: 200px;
+    margin-top: 500px;
+    border-color: #ff751a;
+    color:#ff751a;
+
+
+}
+.search2 .seaimg .btn:hover{
+    background-color: #ff751a;
+    color:  white;
+}
+/* ---------------------End of search div -----------------*/
+
+
+
+
+/* ---------------------Start of search1 div -----------------*/
+
+.back{
+    width: 100%;
+    height: 720px;
+    background-image: url(../images/pic2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.back .buttons{
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,0.8);
+}
+.back .buttons .container{
+    margin-left: 30%;
+    margin-top: 550px;
+    float: left;
+}
+.back .buttons .container #SearchID{
+    margin-left: 20px;
+    border-color:#ff751a;
+    color: #ff751a;
+    font-size: 20px;
+    transition: 1s;
+}
+.back .buttons #SearchID1{
+
+    border-color:#ff751a;
+    color: #ff751a;
+    font-size: 20px;
+    transition: 1s;
+}
+.back .buttons .container #SearchID1:hover{
+    background-color:#ff751a;
+    color: white;
+}
+.back .buttons .container #SearchID:hover{
+
+    background-color:#ff751a;
+    color: white;
+}
+
+.Search1{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: none;
+
+}
+.Search1 .filter{
+    background-color: white;
+    border-bottom: 1px solid lightgrey;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+.Search1 .filter h1{
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+}
+.Search1 .filter ul{
+    list-style-type: none;
+
+}
+.Search1 .filter .form-control{
+    width: 40%;
+    border-color: #563d7c;
+
+
+}
+.Search1 .filter .date{
+    width: 20%;
+    border-color: #ff751a;
+    border-radius: 5px;
+
+}
+.Search1 .filter #SearchID{
+    width: 200px;
+    margin-left: 200px;
+    border-color: #563d7c;
+    background-color: #563d7c;
+    color:  white;
+    transition: 0.5s;
+}
+.Search1 .filter #SearchID:hover{
+    background-color: #ff751a;
+    color:  white;
+}
+@media(max-width:900px){
+   .Search1 .filter #SearchID{
+    width: 200px;
+    margin-left: 0px;
+
+}
+    .Search1 .filter{
+     width: 100%;
+}
+
+.buttons{
+    width: 100%;
+    height: auto;
+    background-color: aqua;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.back .buttons .container {
+    margin-left: 20px;
+}
+    .back .buttons .container #SearchID,#SearchID1{
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 10px;
+    border-color:#ff751a;
+    color: #ff751a;
+    font-size: 20px;
+}
+
+
+
+
+
+
+

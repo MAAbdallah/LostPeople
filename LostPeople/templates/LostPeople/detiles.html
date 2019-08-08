@@ -1,0 +1,40 @@
+{% extends '../templates/LostPeople/baseLost2.html' %}
+
+
+{% block con %}
+{% include '../templates/LostPeople/Comments.html' %}
+
+    <div class="service">
+    <div class="row">
+         <div class="wow bounceInDown serv1 col-lg-4 col-md-4">
+              <img class="img" src="{{ missed.Img.url }}" />
+            <p class="info"><b> Missed Name : </b>{{ missed.name }}<br>
+            <b>Date :</b>{{ missed.date }}<br>
+            <b>Age :</b>{{ missed.age }}<br>
+            </p>
+            {% if user.is_staff and not missed.Accept %}
+                <form  action="{% url 'LostPeople:accept' id2=missed.id %}">
+                    <button type="submit" class="btn-outline-success">accept</button>
+                </form>
+            {% endif %}
+          </div>
+     <div class="comm col-lg-8 col-md-4">
+        {% for commrnt in comments %}
+            <div class="comments ">
+        <p>{{ commrnt.comment }}<br>
+        Date : {{ commrnt.date }}<br>
+        Name : {{ commrnt.Auther }}<br>
+        </p>
+            </div>
+        {% endfor %}
+    </div>
+    </div>
+
+    <form name="makeComment" method="post" action="{% url 'LostPeople:Comment' id3=missed.id%}" >
+        {% csrf_token %}
+                <input  type="text" name="Comment" placeholder="Write a comment " value="">
+                <button type="submit" class="btn-outline-success">Comment</button>
+    </form>
+
+</div>
+{% endblock %}

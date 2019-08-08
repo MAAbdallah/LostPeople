@@ -1,0 +1,37 @@
+{% extends '../templates/LostPeople/baseLost2.html' %}
+
+{% block con %}
+    <div class="container1">
+        <div class="login">
+            <h1>WEL<span>COME</span></h1>
+            <form action="{% url 'LostPeople:create' %}" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                    <div class="form-group">
+                        <label for="nameM">Children/Adults Name </label>
+                        <input type="text" name="nameM" class="form-control" id="nameM" aria-describedby="emailHelp" placeholder="Enter Name " >
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location </label>
+                        <input type="text" name="location" class="form-control" id="location" placeholder="Enter Location " required>
+                    </div>
+                   <div class="form-group">
+                        <label for="Age">Chilfren/Adult Age </label>
+                        <input type="number" name="Age" class="form-control" id="Age" placeholder="Enter Age " required>
+                   </div>
+                    <div class="form-group">
+                        <label for="NameFR">Founder/Relative Name  </label>
+                        <input type="text" name="NameFR" class="form-control" id="NameFR" placeholder="Enter your Name " required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Founder/Relative Number  </label>
+                        <input type="tel" name="phone" class="form-control" id="phone" placeholder="Enter your Mob.No " required>
+                    </div>
+                    <div class="form-group">
+                        <label for="IMG">Select Image</label>
+                        <input type="file" name="IMG" id="IMG" required ><br>
+                    </div>
+                  <button type="submit" name="addMissed" class="btn btn-outline-success">Add Missed</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

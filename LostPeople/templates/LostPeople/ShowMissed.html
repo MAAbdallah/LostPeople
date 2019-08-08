@@ -1,0 +1,28 @@
+{% extends '../templates/LostPeople/baseLost3.html' %}
+
+{% block con %}
+    <div class="service">
+   <h1>Chil<span>dren</span></h1>
+
+    <div class="row">
+
+    {% for missed in misseds %}
+         {% if missed.Accept %}
+         <div class="wow bounceInDown serv1 col-lg-4 col-md-4">
+              <a href="{% url 'LostPeople:detail' id=missed.id %}"> <img class="img" src="{{ missed.Img.url }}" /></a><br>
+            <p>{{ missed.name }}<br>
+            {{ missed.Name_Founder }}<br>
+            {{ missed.date }}<br>
+                {{ missed.age }}<br></p>
+         <br>
+            <button><a href="{% url 'LostPeople:detail' id=missed.id %}"> Read more </a></button> <br>
+             {% if user.is_staff %}
+            <button><a href="{% url 'LostPeople:deleteData' id4=missed.id %}"> Delete </a></button>
+             {% endif %}
+          </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends '../templates/LostPeople/baseLost3.html' %}
+
+{% block con %}
+    <div class="service">
+   <h1>Res<span>ult</span></h1>
+    <div class="row">
+        {% for temp in arr %}
+         <div class="wow bounceInDown serv1 col-lg-4 col-md-4">
+            <a href="{% url 'LostPeople:detail' id=temp.id %}"> <img class="img" src="{{ temp.Img.url }}" /></a><br>
+            <p class="info"> <b>Name : </b>{{ temp.name }}<br>
+           <b>Founder Name : </b> {{ temp.Name_Founder }}<br>
+            <b>Date: </b>{{ temp.date }}<br>
+               <b>Age : </b> {{ temp.age }}<br></p>
+             <br>
+            <button><a href="{% url 'LostPeople:detail' id=temp.id %}"> Read more </a></button>
+          </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}
